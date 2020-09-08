@@ -6,5 +6,5 @@
  		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="tWalk" class="lec05Pjt001.TransportationWalk" />
-	
+
 </beans>
