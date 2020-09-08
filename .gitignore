@@ -1,4 +1,5 @@
 /.metadata/
+<<<<<<< HEAD
 Servers/Tomcat v8.5 Server at localhost-config/context.xml
 Servers/Tomcat v8.5 Server at localhost-config/server.xml
 Servers/Tomcat v8.5 Server at localhost-config/catalina.properties
@@ -7,3 +8,13 @@ Servers/Tomcat v8.5 Server at localhost-config/tomcat-users.xml
 Servers/Tomcat v8.5 Server at localhost-config/web.xml
 Servers/.settings/org.eclipse.wst.server.core.prefs
 Servers/.project
+=======
+Servers/Tomcat v8.5 Server at localhost-config/catalina.properties
+Servers/Tomcat v8.5 Server at localhost-config/catalina.policy
+Servers/Tomcat v8.5 Server at localhost-config/context.xml
+Servers/Tomcat v8.5 Server at localhost-config/server.xml
+Servers/Tomcat v8.5 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v8.5 Server at localhost-config/web.xml
+Servers/.project
+Servers/.settings/org.eclipse.wst.server.core.prefs
+>>>>>>> 5e1405b6f169821de3f21fd0e793bc9441906181
