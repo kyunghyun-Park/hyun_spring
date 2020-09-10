@@ -30,8 +30,8 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">접속하기<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li class="active"><a href="login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="login.jsp">로그인</a></li>
+						<li class="active"><a href="join.jsp">회원가입</a></li>
 					</ul></li>
 
 			</ul>
@@ -59,7 +59,7 @@
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active"> <input
 								type="radio" name="userGender" autocomplete="off" value="남자"
-								checked>남자
+								>남자
 							</label> <label class="btn btn-primary active"> <input
 								type="radio" name="userGender" autocomplete="off" value="여자"
 								checked>여자
