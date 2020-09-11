@@ -20,7 +20,7 @@
 	if (session.getAttribute("userID") != null) {
 		userID = (String) session.getAttribute("userID");
 	}
-	if (userID != null) {
+	if (userID == null) {
 		//로그인 안돼있는 사람
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
