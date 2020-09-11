@@ -18,7 +18,7 @@
 	<%
 		String userID = null;
 	if (session.getAttribute("userID") != null) {
-		userID = (String) session.getAttribute("useID");
+		userID = (String) session.getAttribute("userID");
 	}
 	if (userID != null) {
 		//로그인 안돼있는 사람
@@ -35,12 +35,11 @@
 			script.println("alert('입력이 안 된 사항이 있습니다.')");
 			script.println("history.back()");
 			script.println("</script>");
-
 		} else {
 			//정보를 다 입력했을 시 데이터베이스에 등록해줌
 			BbsDAO bbsDAO = new BbsDAO();
 			int result = bbsDAO.write(bbs.getBbsTitle(),userID,bbs.getBbsContent()); //0,1,-1,-2 값 담김
-			if (result == -1) {
+			if (result == -1) { //데이터베이스 오류
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
 				script.println("alert('글쓰기에 실패했습니다.')");
@@ -54,8 +53,6 @@
 			}
 		}
 	}
-	//회원가입 정보 하나도 안들어왔을때를 검사
-
 	%>
 </body>
 </html>
