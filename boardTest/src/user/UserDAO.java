@@ -24,11 +24,11 @@ public class UserDAO {
 		}
 	}
 
-	public int login(String userId, String userPassword) {
-		String SQL = "SELECT userPassword FROM USER WHERE userId = ?";
+	public int login(String userID, String userPassword) {
+		String SQL = "SELECT userPassword FROM USER WHERE userID = ?";
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, userId);
+			pstmt.setString(1, userID);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
 				if (rs.getString(1).equals(userPassword))
@@ -48,7 +48,7 @@ public class UserDAO {
 		String SQL = "INSERT INTO USER VALUES (?, ?, ?, ?, ?)";
 		try {
 			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, user.getUserId());
+			pstmt.setString(1, user.getUserID());
 			pstmt.setString(2, user.getUserPassword());
 			pstmt.setString(3, user.getUserName());
 			pstmt.setString(4, user.getUserGender());
