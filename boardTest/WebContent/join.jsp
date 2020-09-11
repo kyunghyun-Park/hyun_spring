@@ -45,7 +45,7 @@
 					<h3 style="text-align: center;">회원가입 화면</h3>
 					<div class="form-group">
 						<input type="text" class="form-control" placeholder="아이디"
-							name="userId" maxlength="20">
+							name="userID" maxlength="20">
 					</div>
 					<div class="form-group">
 						<input type="password" class="form-control" placeholder="비밀번호"
@@ -75,7 +75,6 @@
 				</form>
 			</div>
 		</div>
-		<div class="col-lg-4"></div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
