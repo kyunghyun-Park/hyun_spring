@@ -13,7 +13,7 @@
 	<%
 		String userID = null;
 	if (session.getAttribute("userID") != null) {
-		userID = (String) session.getAttribute("userID");
+		userID = (String)session.getAttribute("userID");
 	}
 	%>
 	<nav class="navbar navbar-default">
@@ -87,6 +87,7 @@
 			</form>
 		</div>
 	</div>
+	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>
