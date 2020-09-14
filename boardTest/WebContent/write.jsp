@@ -11,6 +11,7 @@
 </head>
 <body>
 	<%
+		//회원만 넘어가도록
 		String userID = null;
 	if (session.getAttribute("userID") != null) {
 		userID = (String)session.getAttribute("userID");
@@ -33,6 +34,7 @@
 				<li class="active"><a href="bbs.jsp">게시판</a></li>
 			</ul>
 			<%
+				//로그인 안되어 있을때
 				if (userID == null) {
 			%>
 			<ul class="nav navbar-nav navbar-right">
@@ -45,6 +47,7 @@
 					</ul></li>
 			</ul>
 			<%
+				//로그인 되어 있을때
 				} else {
 			%>
 			<ul class="nav navbar-nav navbar-right">
