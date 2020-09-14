@@ -109,20 +109,35 @@
 				</tbody>
 			</table>
 			<%
+				
+				//이전 버튼 생성,pageNumber가 이 아니라면 2이상이기 때문에
 				if(pageNumber != 1){
 			%>
 					<a href="bbs.jsp?pageNumber=<%=pageNumber - 1 %>" 
 					class="btn btn-success brn-arraw-left">이전</a>
 			<% 
+				//다음 버튼 생성,다음페이지가 존재한다면 
 				} if(bbsDAO.nextPage(pageNumber+1)) {
 			%>
 					<a href="bbs.jsp?pageNumber=<%=pageNumber + 1 %>" 
 					class="btn btn-success brn-arraw-left">다음</a>
-			<%
+			<% 
 				}
 			%>
-					
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<!-- 회원일때만 글쓰기 버튼 활성화 -->	
+			<%
+				if(session.getAttribute("userID")!=null){
+			%>
+					<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
+			<%
+				} else {
+			%>
+				<button class="btn btn-primary pull-right" onclick="if(confirm('로그인 하세요'))
+					location.href='login.jsp';" type="button" >글쓰기</button>
+			<% 
+				}
+			%>
+		
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
