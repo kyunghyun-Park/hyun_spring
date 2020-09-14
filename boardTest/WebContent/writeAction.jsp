@@ -48,7 +48,6 @@
 			} else { //아무 이상 없을 때
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
-				script.println("alert('아무 이상 없음.')");
 				script.println("location.href='bbs.jsp'");
 				script.println("</script>");
 			}
