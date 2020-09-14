@@ -17,8 +17,8 @@
 <body>
 	<%
 		String userID = null;
-	if (session.getAttribute("userID") != null) {
-		userID = (String) session.getAttribute("userID");
+	if (session.getAttribute("userID") != null) { //userID이름으로 세션이 존재하는 회원들은
+		userID = (String) session.getAttribute("userID"); //userID에 해당 세션값을 넣어준다.
 	}
 	if (userID == null) {
 		//로그인 안돼있는 사람
@@ -48,6 +48,7 @@
 			} else { //아무 이상 없을 때
 				PrintWriter script = response.getWriter();
 				script.println("<script>");
+				script.println("alert('아무 이상 없음.')");
 				script.println("location.href='bbs.jsp'");
 				script.println("</script>");
 			}
