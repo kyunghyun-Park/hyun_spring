@@ -14,7 +14,7 @@ public class BbsDAO {
 	// 데이터 접근,데이터를 가져오는 데이터 접근객체
 	public BbsDAO() {
 		try {
-			String dbURL = "jdbc:mysql://localhost:3306/BBS?serverTimezone=Asia/Seoul";
+			String dbURL = "jdbc:mysql://localhost:3306/bbs?serverTimezone=Asia/Seoul";
 			String dbId = "root";
 			String dbPassword = "1234";
 			Class.forName("com.mysql.jdbc.Driver");
