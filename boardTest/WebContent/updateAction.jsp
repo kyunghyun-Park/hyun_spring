@@ -48,11 +48,10 @@
 		script.println("alert('권한이 없습니다.')");
 		script.println("location.href='bbs.jsp");
 		script.println("</script>");
-	}
-
-	else {
-		//로그인이 돼있는 사람이 정보를 입력안했다면
-		if (bbs.getBbsTitle() == null || bbs.getBbsContent() == null) {
+	} else {
+		//로그인이 돼있는 사람이 제목,내용 중 하나를 입력안했다면
+		if (request.getParameter("bbsTitle") == null || request.getParameter("bbsContent") == null
+		|| request.getParameter("bbsTitle").equals("") || request.getParameter("bbsContent").equals("")) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
 			script.println("alert('입력이 안 된 사항이 있습니다.')");
@@ -61,11 +60,11 @@
 		} else {
 			//정보를 다 입력했을 시 데이터베이스에 등록해줌
 			BbsDAO bbsDAO = new BbsDAO();
-			int result = bbsDAO.write(bbs.getBbsTitle(), userID, bbs.getBbsContent()); //0,1,-1,-2 값 담김
-			if (result == -1) { //데이터베이스 오류
+			int result = bbsDAO.update(bbsID, request.getParameter("bbsTitle"), request.getParameter("bbsContent"));
+			if (result == -1) { //오류
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
-		script.println("alert('글쓰기에 실패했습니다.')");
+		script.println("alert('글 수정에 실패했습니다.')");
 		script.println("history.back()");
 		script.println("</script>");
 			} else { //아무 이상 없을 때
