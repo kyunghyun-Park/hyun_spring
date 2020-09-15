@@ -63,6 +63,7 @@
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("location.href='bbs.jsp'");
+		script.println("alert('삭제하였습니다.')");
 		script.println("</script>");
 			}
 		}
