@@ -65,7 +65,7 @@
 								type="radio" name="userGender" autocomplete="off" value="여자"
 								checked>여자
 							</label>
-						</div>0
+						</div>
 					</div>
 					<div class="form-group">
 						<input type="email" class="form-control" placeholder="이메일"
