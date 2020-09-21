@@ -185,3 +185,5 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
+Servers/.dbeaver/data-sources.json
+Servers/.dbeaver/credentials-config.json
