@@ -129,3 +129,5 @@ Servers/Tomcat v8.5 Server at localhost-config/catalina.policy
 Servers/.project
 Servers/.dbeaver/data-sources.json
 Servers/.dbeaver/credentials-config.json
+boarddd/.classpath
+boarddd/.project
